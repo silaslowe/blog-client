@@ -1,6 +1,8 @@
 @import "./components/nav/nav.css";
 @import "./components/main/main-display.css";
 @import "./components/sidebar/sidebar.css";
+@import "./components/sidebar/sidebarCard.css";
+
 
 body {
   margin: 0;
