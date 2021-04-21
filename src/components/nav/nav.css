@@ -1,0 +1,9 @@
+h1 {
+    margin: 0;
+}
+
+.nav-container {
+    margin: 0;
+    height: 15vh;
+    background-color: rgb(57, 173, 211);
+}

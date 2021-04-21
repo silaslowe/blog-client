@@ -1,0 +1,11 @@
+.sidebar-container {
+    width: 30%;
+    heigth: 100vh;
+    background-color: lightgreen;
+}
+
+@media (max-width: 600px) {
+    .sidebar-container {
+        display:none;
+    }
+}
