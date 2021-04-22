@@ -6,7 +6,8 @@ import {BlogProvider} from './components/BlogProvider.js'
 export const ApplicationViews = (props) => {
     return <>
     <BlogProvider>
-      <Route exact path="/" render={(props) => <Blog {...props} />} /> 
+      <Route exact path="/" render={(props) => <Blog {...props} />} />
+      <Route path="/:BlogId(\d+)" render={(props) => <Blog {...props} />}/> 
     </BlogProvider>
     </>
 }
