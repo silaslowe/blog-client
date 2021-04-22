@@ -7,7 +7,7 @@ export const BlogProvider = (props) => {
     const [blogs, setBlogs] = useState([{title: '', blogBody: '', imageURL: ''}])
 
     const getBlogs = () => {
-        return fetch("http://my-json-server.typicode.com/silaslowe/blog-test-json/blogs",)
+        return fetch("http://localhost:3000/blogs",)
         .then((res) => res.json())
         .then((parsed) => {
             setBlogs(parsed)
@@ -15,14 +15,21 @@ export const BlogProvider = (props) => {
     }
     
     const getSingleBlog = (id) => {
-        return fetch(`http://my-json-server.typicode.com/silaslowe/blog-test-json/blogs/${id}`)
+        return fetch(`http://localhost:3000/blogs/${id}`)
         .then((res) => res.json())
-        .then((parsed) => {
-            setBlog(parsed)
-        })
-    } 
+        }
+
+    const createBlog = (blog) => {
+        return fetch("http://localhost:3000/blogs", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(blog),
+        }).then(getBlogs)
+    }
     return (
-        <BlogContext.Provider value ={{blog, blogs, setBlogs, getBlogs, getSingleBlog}}>
+        <BlogContext.Provider value ={{blog, blogs, setBlogs, getBlogs, getSingleBlog, createBlog}}>
             {props.children}
         </BlogContext.Provider>
     )
