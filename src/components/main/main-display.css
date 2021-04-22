@@ -1,8 +1,33 @@
+h2 {
+    margin: 0;
+    font-size: 3rem;
+    color: #222;
+    padding: 1.5rem 1.5rem;
+    /* -webkit-text-fill-color: lightgray; 
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black; */
+  }
+
 .main-container {
     width: 70%;
     padding: 1rem;
 }
 
-.mainDisplay-img {
-    width: 50%;
+
+.title-image-container {
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    height: 20vh;
+    width: 100%;
 }
+
+.title-container {
+    display: inline-block;
+    opacity: .8;
+    background-color: lightgray;
+    width: auto;
+}
+
+
+

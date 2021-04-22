@@ -28,8 +28,16 @@ useEffect(() => {
 },[latestBlog])
 
 return <div className="main-container">
-            <p>{latestBlog.title}</p>
+        <div className="title-image-container" style={{
+            backgroundImage: `url(${latestBlog.imageURL})`,
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+            backgroundSize:"100%"
+            }}>
+            <div className="title-container">
+            <h2 className="title-text">{latestBlog.title}</h2>
+            </div>
+        </div>  
             <div>{body}</div>
-            <img className="mainDisplay-img" src={latestBlog.imageURL}/>
     </div>
 }
