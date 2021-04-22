@@ -10,8 +10,8 @@ export const Blog = (props) => {
     <div className="blog">
       <MainDisplay {...props}/>
       <Sidebar/>
-      <Footer/>
     </div>
+      <Footer/>
     </>
   );
 }
