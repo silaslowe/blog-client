@@ -3,21 +3,14 @@ import {BlogContext} from '../BlogProvider.js'
 
 
 export const MainDisplay = (props) => {
-const {blog,blogs, getBlogs, getSingleBlog} = useContext(BlogContext)
+const {blogs, getBlogs} = useContext(BlogContext)
 const [latestBlog, setLatestBlog] = useState({title: '', blogBody: '', imageURL: ''})
 const [body, setBody] = useState('')
 let blogId = parseInt(props.match.params.BlogId)
-const [refresh, setRefresh] = useState(true)
 
 useEffect(() => {
     getBlogs()
 },[])
-
-// useEffect(() => {
-//     getBlogs()
-//     setRefresh(!true)
-// },[blogId])
-
 
 useEffect(() => {
     if(!isNaN(blogId)) {
@@ -35,7 +28,6 @@ useEffect(() => {
 },[latestBlog])
 
 return <div className="main-container">
-        <h3>MAIN DISPLAY</h3>
             <p>{latestBlog.title}</p>
             <div>{body}</div>
             <img className="mainDisplay-img" src={latestBlog.imageURL}/>
