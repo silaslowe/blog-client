@@ -17,10 +17,7 @@ export const BlogProvider = (props) => {
     const getSingleBlog = (id) => {
         return fetch(`http://localhost:3000/blogs/${id}`)
         .then((res) => res.json())
-        .then((parsed) => {
-            setBlog(parsed)
-        })
-    } 
+        }
 
     const createBlog = (blog) => {
         return fetch("http://localhost:3000/blogs", {
