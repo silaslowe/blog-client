@@ -2,6 +2,7 @@
 @import "./components/main/main-display.css";
 @import "./components/sidebar/sidebar.css";
 @import "./components/sidebar/sidebarCard.css";
+@import "./components/footer/footer.css";
 
 html, body { 
   height: 100%; 
@@ -24,5 +25,6 @@ code {
 .blog {
   display: flex;
   flex: row;
-  height: 100vh
+  height: 100%;
+
 }

@@ -10,7 +10,7 @@ export const Footer = (props) => {
 // console.log("D", d)
 return <>
 <div className="footer-container">
-    <p>Silas Lowe {new Date().getFullYear()}©</p>
+    <p className="footer-text">Silas Lowe {new Date().getFullYear()}©</p>
 </div>
 </>
 }
