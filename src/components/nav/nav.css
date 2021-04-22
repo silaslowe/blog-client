@@ -3,6 +3,8 @@ h1 {
 }
 
 .nav-container {
+    display: flex;
+    flex-direction: row;
     margin: 0;
     height: 15vh;
     background-color: rgb(57, 173, 211);
