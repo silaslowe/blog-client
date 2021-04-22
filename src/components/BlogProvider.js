@@ -4,7 +4,7 @@ export const BlogContext = React.createContext()
 
 export const BlogProvider = (props) => {
     // const [blog, setBlog] = useState({})
-    const [blogs, setBlogs] = useState([])
+    const [blogs, setBlogs] = useState([{title: '', blogBody: '', imageURL: ''}])
 
     const getBlogs = () => {
         return fetch("http://my-json-server.typicode.com/silaslowe/blog-test-json/blogs",)
