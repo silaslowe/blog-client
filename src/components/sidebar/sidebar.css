@@ -1,6 +1,8 @@
 .sidebar-container {
+
+    justify-content: center;
     width: 30%;
-    heigth: 100vh;
+    height: 200vh;
     background-color: lightgreen;
 }
 

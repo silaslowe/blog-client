@@ -1,7 +1,19 @@
-import React from 'react'
+import React, {useContext, useState, useEffect} from 'react'
+import {BlogContext} from '../BlogProvider.js'
+import { SidebarCard } from './SidebarCard.js'
+
 
 export const Sidebar = () => {
+    const {blogs, getBlogs} = useContext(BlogContext)
+
+
+    useEffect(() => {
+        getBlogs()
+        console.log(blogs)
+    },[])
+
     return <div className="sidebar-container">
-        <h3>SIDEBAR</h3>
+        {blogs.map(blog => <SidebarCard key={blog.id} blog={blog}/>
+        )}
     </div>
 }

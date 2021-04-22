@@ -1,6 +1,11 @@
 @import "./components/nav/nav.css";
 @import "./components/main/main-display.css";
 @import "./components/sidebar/sidebar.css";
+@import "./components/sidebar/sidebarCard.css";
+
+html, body { 
+  height: 100%; 
+}
 
 body {
   margin: 0;
