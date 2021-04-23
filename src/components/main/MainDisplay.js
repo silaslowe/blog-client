@@ -3,13 +3,14 @@ import {BlogContext} from '../BlogProvider.js'
 
 
 export const MainDisplay = (props) => {
-const {blogs, getBlogs, getSingleBlog} = useContext(BlogContext)
+const {blogs, getBlogs, setBlogs, getSingleBlog} = useContext(BlogContext)
 const [latestBlog, setLatestBlog] = useState({title: '', blogBody: '', imageURL: ''})
 const [body, setBody] = useState('')
 let blogId = parseInt(props.match.params.BlogId)
-console.log(blogId)
 useEffect(() => {
     getBlogs()
+    // .then(() => setBlogs(blogs.reverse()))
+    // .then(()=> console.log(blogs))
 },[])
 
 useEffect(() => {

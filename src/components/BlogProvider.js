@@ -10,7 +10,7 @@ export const BlogProvider = (props) => {
         return fetch("http://localhost:3000/blogs",)
         .then((res) => res.json())
         .then((parsed) => {
-            setBlogs(parsed)
+            setBlogs(parsed.reverse())
         })
     }
     
