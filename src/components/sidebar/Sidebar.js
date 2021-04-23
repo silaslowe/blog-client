@@ -4,7 +4,7 @@ import { SidebarCard } from './SidebarCard.js'
 
 
 export const Sidebar = () => {
-    const {blogs, getBlogs} = useContext(BlogContext)
+    const {blogs, setBlogs, getBlogs} = useContext(BlogContext)
 
 
     useEffect(() => {
@@ -12,8 +12,11 @@ export const Sidebar = () => {
         console.log(blogs)
     },[])
 
+
     return <div className="sidebar-container">
-        {blogs.map(blog => <SidebarCard key={blog.id} blog={blog}/>
+        {blogs
+        .slice(1,5)
+        .map(blog => <SidebarCard key={blog.id} blog={blog}/>
         )}
     </div>
 }
